@@ -11,7 +11,7 @@ router.get("/", async (req, res) => {
     res.json(carts);
   } catch (error) {
     console.log(error);
-    res.status(500).json({ error: "Error fetching carts" });
+    res.status(500).json({ error: "Error recuperando carro" });
   }
 });
 
@@ -23,11 +23,11 @@ router.get("/:cid", async (req, res) => {
     if (cart) {
       res.json(cart);
     } else {
-      res.status(404).json({ error: "Cart not found" });
+      res.status(404).json({ error: "Carro no encontrado" });
     }
   } catch (error) {
     console.log(error);
-    res.status(500).json({ error: "Error fetching cart" });
+    res.status(500).json({ error: "Error recuperando carro" });
   }
 });
 
@@ -37,7 +37,7 @@ router.post("/", async (req, res) => {
     res.status(201).json(newCart);
   } catch (error) {
     console.log(error);
-    res.status(500).json({ error: "Error creating cart" });
+    res.status(500).json({ error: "Error creando carro" });
   }
 });
 
